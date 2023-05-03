@@ -4,8 +4,6 @@ import { RootState } from '../../redux/store';
 import { increment, decrement } from '../../redux/reducers/counterSlice';
 import Button from '@mui/material/Button';
 
-const color = 'white';
-
 const Counter = () => {
   const counter = useSelector((state: RootState) => state.counter.counter);
   const dispatch = useDispatch();

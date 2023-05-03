@@ -1,4 +1,4 @@
-import React, { ReactNode, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { RootState } from '../../redux/store';
 import { useGetTodosQuery } from '../../services/fetchTodosService';
@@ -6,7 +6,6 @@ import { addTodo } from '../../redux/reducers/todosSlice';
 // MUI
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
 import Checkbox from '@mui/material/Checkbox';
 
 const TodosList = () => {
@@ -15,12 +14,13 @@ const TodosList = () => {
   const { data: todosList, error, isLoading } = useGetTodosQuery(counter.counter);
 
   useEffect(() => {
-    console.log(todos.todos);
+    if (error) console.error(error);
     todosList && dispatch(addTodo(todosList));
   }, [counter.counter]);
 
   return (
     <List>
+      {error ? <div>Something went wrong</div> : null}
       {isLoading ? (
         <div>Loading ...</div>
       ) : (
