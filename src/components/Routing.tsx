@@ -5,6 +5,7 @@ import Page404 from '../pages/Page404';
 import SignIn from './Form/SignIn';
 import SignUp from './Form/SignUp';
 import AuthPage from '../pages/AuthPage';
+import MainPage from '../pages/MainPage';
 
 const Routing = () => {
   return (
@@ -15,6 +16,7 @@ const Routing = () => {
         <Route path="" element={<SignIn />} />
         <Route path="register" element={<SignUp />} />
       </Route>
+      <Route path="/main" element={<MainPage />} />
       <Route path="*" element={<Navigate to="/404" />} />
     </Routes>
   );
