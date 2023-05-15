@@ -13,3 +13,7 @@
 %text-title-XSmall {
   @include typography(400, 16px, 24px, 0.15px);
 }
+
+%transition {
+  transition: all 0.3s ease-in-out;
+}

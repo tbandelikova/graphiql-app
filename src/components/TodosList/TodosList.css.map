@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../sass/abstracts/_placeholders.scss","../../sass/abstracts/_mixins.scss","TodosList.css","TodosList.scss","../../sass/abstracts/_variables.scss"],"names":[],"mappings":"AAGA;ECFE,qBAAA;EACA,kBAAA;EACA,gBDCoB;ECApB,eAAA;EACA,iBDD+B;ECG7B,mBDHmC;AEGvC;;ACJA;EACE,cCIc;AFGhB","file":"TodosList.css"}

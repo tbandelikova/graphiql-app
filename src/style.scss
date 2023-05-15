@@ -1,11 +1,15 @@
-// base
-@import './sass/base/normalize';
-@import './sass/base/typography';
 /* abstracts */
 @import './sass/abstracts/variables';
 @import './sass/abstracts/mixins';
 @import './sass/abstracts/placeholders';
 
+// base
+@import './sass/base/normalize';
+@import './sass/base/typography';
+
+// pages
+@import './sass/pages/welcome';
+
 // components
-@import './components/Counter/Counter.scss';
-@import './components/TodosList/TodosList.scss';
+// @import './components/Counter/Counter.scss';
+// @import './components/TodosList/TodosList.scss';

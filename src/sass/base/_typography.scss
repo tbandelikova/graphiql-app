@@ -1,1 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    @include typography(400, 18px, 20px, 0.08em);
+
+    @include media-mobile {
+        @include typography(400, 16px, 24px, 0.15px);
+    }
+}
+
+#root {
+    min-height: 99%;
+    display: flex;
+    flex-direction: column;
+    background: $bg-light;
+}
+
+#root.dark {
+    background: $bg-dark;
+}
