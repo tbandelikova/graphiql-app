@@ -3,12 +3,12 @@ import { getAuth, signOut } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
-  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
-  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
-  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
-  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  apiKey: 'AIzaSyBb6SVS2O65USa7M-OsPGS3sFObZ5hpUkA',
+  authDomain: 'graghiql-firebase-auth.firebaseapp.com',
+  projectId: 'graghiql-firebase-auth',
+  storageBucket: 'graghiql-firebase-auth.appspot.com',
+  messagingSenderId: '267608560334',
+  appId: '1:267608560334:web:3793be6e0d49e33f31369f',
 };
 
 // Initialize Firebase
