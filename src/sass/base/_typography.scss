@@ -14,12 +14,8 @@ body {
 }
 
 #root {
-    min-height: 99%;
+    min-height: 100%;
     display: flex;
     flex-direction: column;
-    background: $bg-light;
-}
-
-#root.dark {
-    background: $bg-dark;
+    box-sizing: border-box;
 }

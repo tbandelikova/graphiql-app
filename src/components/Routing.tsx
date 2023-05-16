@@ -2,12 +2,16 @@ import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import WelcomePage from '../pages/WelcomePage';
 import Page404 from '../pages/Page404';
+import AuthPage from '../pages/AuthPage';
+import MainPage from '../pages/MainPage';
 
 const Routing = () => {
   return (
     <Routes>
       <Route path="/404" element={<Page404 />} />
       <Route path="/" element={<WelcomePage />} />
+      <Route path="/auth" element={<AuthPage />} />
+      <Route path="/main" element={<MainPage />} />
       <Route path="*" element={<Navigate to="/404" />} />
     </Routes>
   );

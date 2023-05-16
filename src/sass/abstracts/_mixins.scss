@@ -9,9 +9,18 @@
   }
 }
 
-@mixin bg-opacity($color, $opacity: 0.5) {
-  background: $color;
-  background: rgba($color, $opacity);
+/**
+ * @param  {key}     CSS property
+ * @param  {color}   Color name defined in the themes under _themes.scss
+ *
+ * @example - @include theme-aware('background', 'color-bg');
+ */
+ @mixin theme-provider($key, $color) {
+  @each $theme-name, $theme-color in $themes {
+      .#{$theme-name} & {
+          #{$key}: map-get(map-get($themes, $theme-name), $color)
+      }
+  }
 }
 
 @mixin media-laptop {

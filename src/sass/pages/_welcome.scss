@@ -1,6 +1,9 @@
 .main {
+    display: flex;
+    align-items: center;
     padding: 20px 0;
     flex-grow: 1;
+    @include theme-provider('background', 'color-bg');
 }
 
 .container {
@@ -8,23 +11,13 @@
     padding: 0 40px;
     max-width: $content-width;
 
-    @include media-mobile {
+    @include media-tablet {
         padding: 0 20px;
     }
-}
 
-.header {
-    padding: 20px 0;
-    position: sticky;
-    top: 0;
-    z-index: 5;
-    background: $color-light-m;
-    box-shadow: 0px 12px 24px 0px $color-dark-s;
-}
-
-.footer {
-    padding: 20px 0;
-    @include bg-opacity($color-light-m, 0.8);
+    @include media-mobile {
+        padding: 0 10px;
+    }
 }
 
 .wrap {
@@ -50,26 +43,31 @@
 .title {
     @include typography(700, 72px, 75px);
     margin: 20px 0;
-    color: $color-primary;
     text-shadow: -7px 0px 3px rgba($color-primary, .5);
+    @include theme-provider('color', 'color-title');
 
     @include media-tablet {
         @include typography(700, 54px, 57px);
     }
 }
 
+.subtitle {
+    @include theme-provider('color', 'color-title');
+    font-weight: 700;
+}
+
 .text {
     text-align: justify;
+    @include theme-provider('color', 'color-text');
 }
 
 .link {
     margin: 10px;
     padding: 15px;
-    color: $color-primary;
-    background-color: transparent;
     text-decoration: none;
     text-transform: uppercase;
-
+    @include theme-provider('background', 'color-bg-link');
+    @include theme-provider('color', 'color-link');
     @include typography(700, 24px, 27px, 0.1em);
     @extend %transition;
 
@@ -77,27 +75,28 @@
         color: lighten($color-primary, 10%);
         background-color: lighten($color-light-xs, 10%);
     }
+
+    @include media-tablet {
+        letter-spacing: 0px;
+    }
+
+    @include media-mobile {
+        font-size: 20px;
+    }
 }
 
 .shape {
     padding: 5% 10%;
     clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
-    @include bg-opacity($color-light-s, .3);
+    @include theme-provider('background', 'color-shape');
 
     @include media-laptop {
         padding: 5px 15px;
         clip-path: none;
     }
-}
 
-.dark {
-
-    .header,
-    .footer {
-        background: $color-dark-m;
-    }
-
-    .link {
-        background-color: $color-light-xs;
+    @include media-tablet {
+        padding: 5% 10%;
+        clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
     }
 }

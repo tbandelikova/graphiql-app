@@ -8,7 +8,7 @@
   @include typography(400, 20px, 24px, 0.5px);
 }
 %text-title-small {
-  @include typography(400, 16px, 24px, 0.5px);
+  @include typography(700, 16px, 24px, 0.5px);
 }
 %text-title-XSmall {
   @include typography(400, 16px, 24px, 0.15px);

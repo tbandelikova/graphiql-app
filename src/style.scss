@@ -5,11 +5,13 @@
 
 // base
 @import './sass/base/normalize';
+@import './sass/base/themes';
 @import './sass/base/typography';
 
 // pages
+@import './sass/pages/auth';
 @import './sass/pages/welcome';
 
 // components
-// @import './components/Counter/Counter.scss';
-// @import './components/TodosList/TodosList.scss';
+@import './components/Header/Header';
+@import './components/Footer/Footer';
