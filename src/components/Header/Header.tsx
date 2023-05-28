@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import Switch from '@mui/material/Switch';
 import { Button, IconButton } from '@mui/material';
 import { FormControlLabel, MenuItem, FormControl } from '@mui/material';
@@ -7,7 +8,7 @@ import LogoutIcon from '@mui/icons-material/Logout';
 import SettingsIcon from '@mui/icons-material/Settings';
 
 const Header = () => {
-  const [lang, setLang] = useState('EN');
+  const [lang, setLang] = useState('en');
   const [isSticky, setIsSticky] = useState(false);
   const [isShown, setIsShown] = useState(false);
   const [checked, setChecked] = useState(true);
@@ -48,7 +49,7 @@ const Header = () => {
   return (
     <header className={headerClassName}>
       <div className="container header__container">
-        <h1 className="logo">LOGO</h1>
+        <h1 className="logo"><Link to="/" className="logo__link">Graphi</Link></h1>
         <div className="header__btns">
           <Button variant="outlined" endIcon={<LogoutIcon color='secondary' />} color="secondary">
             {userName}
@@ -65,8 +66,8 @@ const Header = () => {
                 onChange={handleSelect}
                 autoWidth
               >
-                <MenuItem value={'EN'}>EN</MenuItem>
-                <MenuItem value={'BY'}>BY</MenuItem>
+                <MenuItem value={'en'}>EN</MenuItem>
+                <MenuItem value={'by'}>BY</MenuItem>
               </Select>
             </FormControl>
           </div>

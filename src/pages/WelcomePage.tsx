@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { getTranslation as translate } from '../services/translationService';
 
 const WelcomePage = () => {
   return (
@@ -8,12 +9,12 @@ const WelcomePage = () => {
         <div className="wrap">
           <div className="intro">
             <div className="shape">
-              <h2 className="title">Welcome!</h2>
+              <h2 className="title">{translate('title')}</h2>
               <p className="subtitle">
-                to a playground/IDE for graphQL requests
+                {translate('subtitle')}
               </p>
               <p className="text">
-                Send a GraphQL query to your API and get exactly what you need, nothing more and nothing less. GraphQL queries always return predictable results.
+                {translate('text')}
               </p>
             </div>
           </div>

@@ -6,9 +6,9 @@ const Footer = () => {
         <footer className="footer">
             <div className="container footer__container">
                 <ul className="team-list">
-                    <li className="team-list__item">
+                    {/* <li className="team-list__item">
                         <a href="https://github.com/AndrewMotevich" target="_blank">Andrew Motevich</a>
-                    </li>
+                    </li> */}
                     <li className="team-list__item">
                         <a href="https://github.com/tbandelikova" target="_blank">Tatsiana Bandelikova</a>
                     </li>

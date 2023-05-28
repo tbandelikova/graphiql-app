@@ -64,7 +64,6 @@
 .link {
     margin: 10px;
     padding: 15px;
-    text-decoration: none;
     text-transform: uppercase;
     @include theme-provider('background', 'color-bg-link');
     @include theme-provider('color', 'color-link');
