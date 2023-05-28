@@ -1,10 +1,10 @@
 .MuiBox-root {
     width: 300px;
-    height: 320px;
+    height: 305px;
     display: flex;
     flex-direction: column;
-    gap: 16px;
-    background-color: #efeff0;
+    gap: 10px;
+    background: rgba($color-light-s, .5);
 }
 
 .login__container,
@@ -12,9 +12,17 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    &>* {
+        margin-top: 0;
+        @include theme-provider('color', 'color-text');
+    }
 }
 
-.login__link,
-.register__link {
-    padding: 10px 0;
+.MuiButton-text a {
+    color: $color-primary;
+}
+
+.MuiButton-contained a {
+    color: white;
 }

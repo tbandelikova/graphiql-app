@@ -1,1 +1,3 @@
-export interface ILangObject { [key: string]: string };
+export interface ILangObject {
+  [key: string]: string;
+}

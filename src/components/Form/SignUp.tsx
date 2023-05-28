@@ -1,4 +1,4 @@
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { auth, db } from '../../firebase';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { collection, addDoc } from 'firebase/firestore';
@@ -42,9 +42,6 @@ const SignUp = () => {
       <div className="register__container">
         <h2>Sign Up</h2>
         <Form title="Sign Up" funcSubmit={registerWithEmailAndPassword} />
-        <div className="register__link">
-          Already have an account? <Link to="..">Login</Link> now.
-        </div>
       </div>
     </div>
   );

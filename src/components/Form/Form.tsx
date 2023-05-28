@@ -19,15 +19,7 @@ const Form = (props: FormPropsType) => {
   const onSubmit = (data: IFormInput) => funcSubmit(data.email, data.password, data.name);
 
   return (
-    <Box
-      component="form"
-      sx={{
-        boxShadow: 3,
-        borderRadius: 2,
-        p: 2,
-      }}
-      onSubmit={handleSubmit(onSubmit)}
-    >
+    <Box component="form" sx={{ borderRadius: 3 }} onSubmit={handleSubmit(onSubmit)}>
       {isNewUser && (
         <TextField
           id="outlined-name-input"

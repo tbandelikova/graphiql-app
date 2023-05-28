@@ -1,4 +1,4 @@
 export type SettingsType = {
-    theme: string;
-    lang: string;
-  };
+  theme: string;
+  lang: string;
+};

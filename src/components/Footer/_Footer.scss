@@ -51,13 +51,7 @@
 
     @include media-tablet {
         display: flex;
-        min-width: 300px;
-        justify-content: space-between;
-    }
-
-    @include media-mobile {
         flex-direction: column;
-        min-width: 0;
     }
 }
 
