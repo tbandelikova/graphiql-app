@@ -1,0 +1,17 @@
+$color-light-xs: #efeff0;
+$color-light-s: #d2d4dc;
+$color-light-m: #8d9bb8;
+
+$color-dark-xs: #545454;
+$color-dark-s: #343636;
+$color-dark-m: #252627;
+
+$color-primary: #9c27b0;
+
+$bg-light: no-repeat center/cover url("src/assets/images/light-xs-paper.png"), $color-light-m;
+$bg-dark: no-repeat center/cover url("src/assets/images/dark-plate.png"), $color-dark-m;
+
+$content-width: 1170px;
+$laptop-width: 1024px;
+$tablet-width: 768px;
+$mobile-width: 375px;

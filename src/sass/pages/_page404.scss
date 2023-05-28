@@ -1,0 +1,5 @@
+.not-found {
+    text-shadow: 0px 12px 24px $color-dark-xs;
+    @include typography(700, 100px, 110px, 0.1em);
+    @include theme-provider('color', 'color-text');
+}

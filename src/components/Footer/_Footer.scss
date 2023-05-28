@@ -1,0 +1,82 @@
+.footer {
+    padding: 20px 0;
+    @include theme-provider('background', 'color-footer');
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include media-tablet {
+            flex-direction: column;
+            &>*:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+.team-list {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    &__item {
+
+        a {
+            text-decoration: none;
+            @extend %text-title-small;
+            @extend %transition;
+            @include theme-provider('color', 'color-text');
+
+            &:after {
+                content: '';
+                display: block;
+                width: 0;
+                height: 2px;
+                background-color: $color-primary;
+                @extend %transition;
+            }
+
+            &:hover {
+                color: $color-primary;
+
+                &::after {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    @include media-tablet {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.year {
+    pointer-events: none;
+    @include theme-provider('color', 'color-text');
+}
+
+.school {
+    width: 100px;
+    @extend %transition;
+
+    &__logo {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+    }
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.css-j204z7-MuiFormControlLabel-root .MuiFormControlLabel-label,
+.css-jedpe8-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.MuiSelect-select {
+    @include theme-provider('color', 'color-text');
+}

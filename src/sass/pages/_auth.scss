@@ -1,0 +1,22 @@
+.auth {
+    &__content {
+        margin-top: 10px;
+        padding: 10px 5px;
+    }
+
+    &__wrap {
+        padding: 5px;
+        border: 2px solid $color-primary;
+        border-radius: 10%;
+        @include theme-provider('background', 'color-shape');
+
+        @include media-mobile {
+            padding: 0;
+            border: none;
+        }
+    }
+
+    &__btns {
+        text-align: center;
+    }
+}

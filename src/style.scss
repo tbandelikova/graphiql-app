@@ -1,0 +1,19 @@
+/* abstracts */
+@import './sass/abstracts/variables';
+@import './sass/abstracts/mixins';
+@import './sass/abstracts/placeholders';
+
+// base
+@import './sass/base/normalize';
+@import './sass/base/themes';
+@import './sass/base/typography';
+
+// pages
+@import './sass/pages/auth';
+@import './sass/pages/page404';
+@import './sass/pages/welcome';
+
+// components
+@import './components/Header/Header';
+@import './components/Footer/Footer';
+@import './components/Form/Form.scss';
