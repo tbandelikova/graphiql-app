@@ -8,3 +8,29 @@
     letter-spacing: $spacing;
   }
 }
+
+/**
+ * @param  {key}     CSS property
+ * @param  {color}   Color name defined in the themes under _themes.scss
+ *
+ * @example - @include theme-aware('background', 'color-bg');
+ */
+ @mixin theme-provider($key, $color) {
+  @each $theme-name, $theme-color in $themes {
+      .#{$theme-name} & {
+          #{$key}: map-get(map-get($themes, $theme-name), $color)
+      }
+  }
+}
+
+@mixin media-laptop {
+  @media (max-width: $laptop-width) { @content; }
+}
+
+@mixin media-tablet {
+  @media (max-width: $tablet-width) { @content; }
+}
+
+@mixin media-mobile {
+  @media (max-width: $mobile-width) { @content; }
+}

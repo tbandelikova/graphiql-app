@@ -1,13 +1,19 @@
-// base
-@import './sass/base/normalize';
-@import './sass/base/typography';
 /* abstracts */
 @import './sass/abstracts/variables';
 @import './sass/abstracts/mixins';
 @import './sass/abstracts/placeholders';
 
-// components
-@import './components/Counter/Counter.scss';
-@import './components/TodosList/TodosList.scss';
-@import './components/Form/Form.scss';
+// base
+@import './sass/base/normalize';
+@import './sass/base/themes';
+@import './sass/base/typography';
 
+// pages
+@import './sass/pages/auth';
+@import './sass/pages/page404';
+@import './sass/pages/welcome';
+
+// components
+@import './components/Header/Header';
+@import './components/Footer/Footer';
+@import './components/Form/Form.scss';

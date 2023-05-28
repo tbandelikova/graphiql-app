@@ -1,0 +1,24 @@
+$themes: (
+    light: (
+        color-bg: $bg-light,
+        color-title: $color-primary,
+        color-text: $color-dark-m,
+        color-link: $color-primary,
+        color-bg-link: 'transparent',
+        color-shape: rgba($color-light-s, .3),
+        color-header: $color-light-m,
+        color-header-sticky: $color-light-s,
+        color-footer: $color-light-m,
+    ),
+    dark: (
+        color-bg: $bg-dark,
+        color-title: $color-primary,
+        color-text: $color-light-s,
+        color-link: $color-primary,
+        color-bg-link: rgba($color-light-xs, .8),
+        color-shape: rgba($color-dark-s, .8),
+        color-header: $color-dark-m,
+        color-header-sticky: $color-dark-s,
+        color-footer: $color-dark-m,
+    )
+);
